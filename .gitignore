@@ -1,7 +1,2 @@
 /target/
-.project
-
-*.classpath
-*.prefs
-/springBootSample/target/*
-springBootSample/logs/*
+/logs/
