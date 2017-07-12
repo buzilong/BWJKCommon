@@ -3,7 +3,9 @@ package com.bwjk.common.basedto;
 public class ErrorInfo {
 
 	private String message;
+	
 	private String code;
+	
 	private String type;
 
 	public String getMessage() {
