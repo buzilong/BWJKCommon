@@ -10,53 +10,64 @@ public class BusinessException extends Exception {
 	/**
 	 * Unified error code.
 	 */
-	private final String errorCode;
+	private final String code;
 	
 	/**
 	 * Unified error code.
 	 */
-	private final String errorType;
+	private final String type;
+	
+	private final String message;
 
-
-	public BusinessException(String message,  String errorCode) {
+	public BusinessException(String message,  String code) {
 		super(message);
-		this.errorCode = errorCode;
-		this.errorType = null;
+		this.message = message;
+		this.code = code;
+		this.type = null;
 	}
 	
-	public BusinessException( String message,  String errorCode, String errorType) {
+	public BusinessException( String message,  String code, String type) {
 		super(message);
-		this.errorCode = errorCode;
-		this.errorType = errorType;
+		this.message = message;
+		this.code = code;
+		this.type = type;
 	}
-	public BusinessException( Throwable cause, String errorCode) {
+	public BusinessException( Throwable cause, String code) {
 		super(cause);
-		this.errorCode = errorCode;
-		this.errorType = null;
+		this.message = null;
+		this.code = code;
+		this.type = null;
 	}
 	
-	public BusinessException(Throwable cause,  String errorCode, String errorType) {
+	public BusinessException(Throwable cause,  String code, String type) {
 		super(cause);
-		this.errorCode = errorCode;
-		this.errorType = errorType;
+		this.message = null;
+		this.code = code;
+		this.type = type;
 	}
 
-	public BusinessException( String message,Throwable cause, String errorCode, String errorType) {
+	public BusinessException( String message,Throwable cause, String code, String type) {
 		super(message, cause);
-		this.errorCode = errorCode;
-		this.errorType = errorType;
+		this.message = message;
+		this.code = code;
+		this.type = type;
 	}
-	public BusinessException( String message,  Throwable cause,  String errorCode) {
+	public BusinessException( String message,  Throwable cause,  String code) {
 		super(message, cause);
-		this.errorCode = errorCode;
-		this.errorType = null;
+		this.message = message;
+		this.code = code;
+		this.type = null;
 	}
-	public String getErrorCode() {
-		return errorCode;
+	public String getCode() {
+		return code;
 	}
 
-	public String getErrorType() {
-		return errorType;
+	public String getType() {
+		return type;
+	}
+
+	public String getMessage() {
+		return message;
 	}
 
 }
