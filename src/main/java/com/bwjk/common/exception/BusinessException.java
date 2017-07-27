@@ -17,44 +17,44 @@ public class BusinessException extends Exception {
 	 */
 	private final String type;
 	
-	private final String message;
+	private final String businessMessage;
 
 	public BusinessException(String message,  String code) {
 		super(message);
-		this.message = message;
+		this.businessMessage = message;
 		this.code = code;
 		this.type = null;
 	}
 	
 	public BusinessException( String message,  String code, String type) {
 		super(message);
-		this.message = message;
+		this.businessMessage = message;
 		this.code = code;
 		this.type = type;
 	}
 	public BusinessException( Throwable cause, String code) {
 		super(cause);
-		this.message = null;
+		this.businessMessage = null;
 		this.code = code;
 		this.type = null;
 	}
 	
 	public BusinessException(Throwable cause,  String code, String type) {
 		super(cause);
-		this.message = null;
+		this.businessMessage = null;
 		this.code = code;
 		this.type = type;
 	}
 
 	public BusinessException( String message,Throwable cause, String code, String type) {
 		super(message, cause);
-		this.message = message;
+		this.businessMessage = message;
 		this.code = code;
 		this.type = type;
 	}
 	public BusinessException( String message,  Throwable cause,  String code) {
 		super(message, cause);
-		this.message = message;
+		this.businessMessage = message;
 		this.code = code;
 		this.type = null;
 	}
@@ -66,8 +66,9 @@ public class BusinessException extends Exception {
 		return type;
 	}
 
-	public String getMessage() {
-		return message;
+	public String getBusinessMessage() {
+		return businessMessage;
 	}
+
 
 }

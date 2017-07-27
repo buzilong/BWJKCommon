@@ -21,4 +21,14 @@ public class BaseReponseDTO {
 		}
 		errorList.add(errorInfo);
 	}
+
+	public void addAllErrors(List<ErrorInfo> errorInfos) {
+		if (errorInfos != null) {
+			if (errorList == null) {
+				errorList = new ArrayList<>();
+			}
+			errorList.addAll(errorInfos);
+		}
+
+	}
 }
